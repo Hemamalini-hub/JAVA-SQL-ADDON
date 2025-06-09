@@ -11,6 +11,6 @@ public class DefaultConstructor{
     public static void main(String[] args){
         // object creation
         //classname reference variable= new classname();
-        DefaultConstructor ref=new DefaultConstructor("Java",1995);
+        DefaultConstructor ref=new DefaultConstructor("hema",2006);
     }
 }
