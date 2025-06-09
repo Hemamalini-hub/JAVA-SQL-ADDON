@@ -1,32 +1,23 @@
-import java.util.Scanner;
-class Main {
-   public static void main(String[] args) {
-       System.out.println("Enter the Vowels:");
-      char vowels = Scanner.Next().toUpperCase().charAt(0);
-        switch (vowels) {
-            case 'a':
-                System.out.println("vowels is correct");
-                break;
-            case 'e':
-                System.out.println("vowels is correct");
-                break;
-            case 'i':
-                System.out.println("vowels is correct");
-                break;
-            case 'o':
-                System.out.println("vowels is correct");
-                break;
-            case 'u':
-                System.out.println("vowels is correct");
-                break;
-            default:
-                System.out.println("Invalid vowels");
-                break;
+import java.util.*;
+class Vowelconsonants {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        System.out.println("Enter the String;");
+        String word = s.nextLine();
+        word = word.toLowerCase();
+        int vowels = 0;
+        int consonants = 0;
+        for(int i=0;i<word.length();i++){
+            char ch = word.charAt(i);
+            if(Character.isLetter(ch)){
+               if( ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') {
+                    vowels++;
+                } else {
+                    consonants++;
+                }
+            }
         }
-
-            Scanner.Close();
+        System.out.println("Number of vowels:" + vowels);
+         System.out.println("Number of consonants:" + consonants);
     }
-
-   }
-    
-
+}
