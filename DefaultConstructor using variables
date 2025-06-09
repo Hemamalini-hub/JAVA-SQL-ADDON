@@ -1,16 +1,17 @@
 public class DefaultConstructor{
     String name;
     int year;
-    
-     DefaultConstructor(String name, int year){
+    String language;
+     DefaultConstructor(String name, int year,String lang){
          this.name=name;
          this.year=year;
-         System.out.println("DefaultConstructor"+" "+name+" "+year);
+this.language=lang;
+         System.out.println("DefaultConstructor"+" "+name+" "+year+" "+lang);
          
 }
     public static void main(String[] args){
         // object creation
         //classname reference variable= new classname();
-        DefaultConstructor ref=new DefaultConstructor("hema",2006);
+        DefaultConstructor ref=new DefaultConstructor("hema",2006,"Human being");
     }
 }
