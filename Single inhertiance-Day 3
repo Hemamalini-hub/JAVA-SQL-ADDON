@@ -1,0 +1,22 @@
+Single inhertiance:
+      (one superclass having one subclass)
+Sample program:
+//superclass
+class singlelevel {
+    void message(){
+      System.out.print("hi");
+    }
+}
+//one subclass
+class subclass extends singlelevel {
+    void view(){
+     System.out.print("hello");
+}
+}
+class Main {
+     public static void main(String[] args) {
+         subclass ref=new subclass();
+           ref.message();
+           ref.view();
+    }
+}
