@@ -1,0 +1,20 @@
+//File Handling Task-2
+import java.io.*;//package
+class FileHandling{
+    public static void main(String[] args) {
+        String filename="C://Users//Temp.kgisl//Demo.txt";
+        //String filename="textfile /path";
+     
+        try(BufferedReader br=new BufferedReader(new FileReader(filename))){
+            String Line;
+            if((Line = br.readLine()) !=null){
+                 System.out.println("Line");
+            }
+            
+        }catch(Exception e){
+             System.out.println("Filenotfound");
+        }
+        
+        //File myobj=new File("filename.txt");//specify the filename
+    }
+}
