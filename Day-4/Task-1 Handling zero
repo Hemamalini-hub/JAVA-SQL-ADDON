@@ -1,4 +1,5 @@
 //Exception Handing Task-1
+//Arithmetic Exception
 import java.util.Scanner;
 //Divide By Zero
 class zero{
