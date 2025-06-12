@@ -1,0 +1,15 @@
+//Task-1 Integer Numbers
+public class Main implements Thread{
+    public void run(){
+        for(int i=1;1<=10;i++){
+         System.out.println("Integer Numbers:" + " "+ i);
+    }
+    }
+}
+    class Execute{
+      public static void main(String[] args) {
+          Main m=new Main();
+          m.start();
+        //System.out.println("");
+    }
+    }
