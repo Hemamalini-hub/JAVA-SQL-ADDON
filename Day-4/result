@@ -13,7 +13,7 @@ public class SimpleFileHandling {
                 total += Integer.parseInt(parts[1].trim());
                 count++;
             }
-        } catch (IOException | NumberFormatException e) {
+        } catch (Exception e) {
             System.out.println("Error reading file: " + e.getMessage());
             return;
         }
