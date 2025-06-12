@@ -26,7 +26,7 @@ if (requestedSeats <= SetToSeat) {
                 System.out.println("Wrong" + userName + " failed to book. Only " + SetToSeat + " seat(s) available.");
             }
 }
-            System.out.println("🎫 Remaining seats: " + SetToSeat + "\n");
+            System.out.println(" Remaining seats: " + SetToSeat + "\n");
         
         }
 
