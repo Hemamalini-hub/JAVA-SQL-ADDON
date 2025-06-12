@@ -1,0 +1,18 @@
+//LinkedList Task-1
+import java.util.LinkedList;
+//Collections
+class  LinkedListsprogram {
+    public static void main(String[] args) {
+    LinkedList<Object> vn=new LinkedList<Object>();
+       vn.add("A");
+       vn.add("computer Application");
+       vn.add("3 Year");
+       vn.add(0,"Hari");
+       //vn.set(0,"hema");
+        // System.out.println(vn.get(1));
+       //for(datatype:variable)
+       for(Object data:vn){
+      System.out.println(data);
+           }
+    }
+} 
