@@ -12,7 +12,7 @@ public class BufferedReaderMarks {
             String line;
             while ((line = br.readLine()) != null) {
                 String[] parts = line.split(",");
-                int mark = Integer.parseInt(parts[1].trim());
+                int mark = Integer.parseInt();
                 total += mark;
                 count++;
             }
@@ -20,7 +20,7 @@ public class BufferedReaderMarks {
             System.err.println("Error: " + e.getMessage());
         }
 
-        double average = (count > 0) ? (double) total / count : 0;
+       
         System.out.println("Total Marks: " + total);
         System.out.println("Average Marks: " + average);
     }
