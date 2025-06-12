@@ -1,0 +1,36 @@
+import java.util.ArrayList;
+import java.util.HashMap;
+class StudentManage {
+
+    public static void main(String[] args) {
+       HashMap<Integer,String> StudentManage=new HashMap<>();
+       //accepts all types of values
+       ArrayList<Object> arr=new ArrayList<>();
+        arr.add("Hemamalini");
+        arr.add("Rohini");
+        arr.add("Priya");
+        arr.add("Hari");
+        arr.add("Dharshini");
+        StudentManage.put(2321,"BCA");
+        StudentManage.put(2322,"B.SC(CS)");
+        StudentManage.put(2323,"B.SC(IT)");
+        StudentManage.put(2324,"B.SC(CT)");
+        StudentManage.put(2325,"B.C0M");
+        System.out.println(arr);
+        System.out.println(StudentManage);
+       // added 
+        arr.add("Gayathri");
+        arr.add("Kashini");
+        arr.add("Ranjitha");
+        System.out.println("After adding elements: " + arr);
+        //search
+String searchItem = "Ranjitha";
+        if (arr.contains(searchItem)) {
+            System.out.println(searchItem + " is found in the Studentslist.");
+        } else {
+            System.out.println(searchItem + " is not found in the Studentslist.");
+        }
+        //
+    }
+}
+    
