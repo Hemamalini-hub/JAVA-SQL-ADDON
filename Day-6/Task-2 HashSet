@@ -2,13 +2,12 @@
 import java.util.HashSet;
 class Emailprogram {
     public static void main(String[] args) {
-    HashSet<String> email=new HashSet();
-       email.add("hema@gmail.com");
-       email.add("malini@gmail.com");
-       email.add("priya@gmail.com");
-       
+    HashSet<String> studentemail=new HashSet<>();
+       studentemail.add("hema@gmail.com");
+       studentemail.add("malini@gmail.com");
+       studentemail.add("priya@gmail.com");
        //for(datatype:variable)
-       for(String data:email){
+       for(String data: studentemail){
         System.out.println(data);
        }
     }
