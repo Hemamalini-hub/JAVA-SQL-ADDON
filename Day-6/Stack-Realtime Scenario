@@ -1,0 +1,14 @@
+//Stack
+import java.util.Stack;
+//Collections
+class stackprogram {
+    public static void main(String[] args) {
+    Stack<Integer> vn=new  Stack<Integer>();
+       vn.push(2);
+
+       //for(datatype:variable)
+       for(Object data:vn){
+      System.out.println(data);
+           }
+    }
+} 
