@@ -16,7 +16,7 @@ public class BufferedReaderMarks {
                 total += mark;
                 count++;
             }
-        } catch (IOException | NumberFormatException e) {
+        } catch (Exception e) {
             System.err.println("Error: " + e.getMessage());
         }
 
