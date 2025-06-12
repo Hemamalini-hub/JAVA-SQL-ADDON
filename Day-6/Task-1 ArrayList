@@ -8,8 +8,9 @@ class  ArrayListsprogram {
        arr.add("computer Application");
        arr.add("3 Year");
        arr.add(0,"Hari");
-       arr.add(1,"Hema");
-       //for(datatype:variable)
+      arr.set(0,"hema");
+        System.out.println(arr.get(1));
+      //for(datatype:variable)
        for(Object data:arr){
       System.out.println(data);
            }
