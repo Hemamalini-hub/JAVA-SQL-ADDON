@@ -36,3 +36,12 @@ public class StringBuffer{
     }
 }
 //output:
+//Example
+class reserves{
+    public static void main(String[] args) {
+      StringBuffer sb=new StringBuffer("Hello java");
+        sb.reverse();
+        System.out.println(sb);
+        
+    }
+}
