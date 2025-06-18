@@ -16,7 +16,7 @@ oracle:
 select columnname
 from tablename1,tablename2;
 
-                                                                2)Inner join/equi join
+                                                      2)Inner join/equi join
 
          ->It's used to obtain only matching records
 join condition:
@@ -47,7 +47,7 @@ On emp . deptno = dept . deptno;
        from dept,emp
       where emp.deptno=dept.deptno and dname='Accounting';
 
-3)outer join:
+                                                              3)outer join:
       ->To match rows between tables along with unmatched rows.
 types:
    ->left outer join 
@@ -73,11 +73,39 @@ select*
 from emp full outer join dept
 On emp.deptno=dept.deptno;
 
-4)Natural join:
+                                                                  4)Natural join:
  ->It behaves as "inner join" of there is relation between 
    the Else it behaves as "cross join".
 SYNTAX:
  select column_name
  from table name1 natural join table name2;
 
-5)Self join
+                                                                              5)Self join
+  ->joining the table itself or joining the same table is known as self join.
+
+Ansi:
+select column_name
+from table name t1 join table name t2
+On<join_condition>;
+
+oracle:
+select column_name
+from table name t1 join table name t2
+On<join_condition>;
+
+join condition:
+e1.mgr=e2.emp no;
+
+E1=>employee details
+E2=>reporting manager details
+Example:
+1) name of the employee and his managers name if employee working as clerk?
+Answer:
+    select e1.ename emp_name,e2.ename mgr_name
+    from emp e1,emp e2
+   where e1.mrg=e2.empno and e1.job='CLERK';
+2) name of the employee and manager salary if employee and manager both earn more than 2300?
+Answer:
+ select e1.ename emp_name,e2.sal mgr_sal
+from emp e1,emp e2
+where e1.mgr=e2.empno e2.sal>2300 and e1.sal>2300;
