@@ -1,8 +1,44 @@
+//Sub-Query
+     A query returns a sub query.
+     A query written inside another query.
+->case 01:unknown
+->case 02:data select -condition execute
+->nested sub-query:a subquery written inside another subquery
+->corelated sub-query:doesn't work in sql,gives partial output
+->types of sub-query
+1)single row: we can single rows(Nomral operator)
+2)multi row : we can pass multiple rows(Special symbols-IN)
+EXAMPLE:
 select dname
+from dept
+where deptno IN(select deptno
+                from emp
+where ename IN ('SMITH','ALLEN'));
+->subquery operators
+  1)all
+1)ename of the emp earning more than the all employees working dept10?
+Answer:
+select ename
+from emp
+where sal>(select sal 
+           from emp
+           where deptno=10);
+  2)any
+
+1)select ename
+from emp
+where deptno=(select deptno
+              from emp
+              where ename='KING');
+
+
+2)select dname
 from dept
 where deptno=(select deptno
               from emp
               where ename='SCOTT');
+
+
 3)Find employee who have the highest salary in their respective departments?
 Answer:
 select ename,deptno
@@ -10,6 +46,8 @@ from emp
 where sal=(select max(sal)
               from emp
               );
+
+
 4)List all employees who earn more than'SMITH'?
 Answer:
 select ename
@@ -17,3 +55,35 @@ from emp
 where sal=(select max(sal)
               from emp
               );
+
+5)Find managers who earn less than some of their employees?
+Answer:
+select ename
+from emp
+where sal=(select min(sal)
+           from emp
+where job='MANAGER');
+
+
+6)Find the manager who earn less than some their employees?
+Answer:
+select ename,sal
+from emp
+where sal>(select avg(sal)
+           from emp
+);
+
+
+//Nested SUB-query
+1)details of the employee 3rd minimum salary?
+Answer:
+select *
+from emp
+where sal=(select min(sal)
+           from emp
+where sal>(select min(sal)
+           from emp
+where sal>(select min(sal)
+           from emp
+)));
+
