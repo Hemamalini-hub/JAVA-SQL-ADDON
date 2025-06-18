@@ -1,0 +1,19 @@
+select dname
+from dept
+where deptno=(select deptno
+              from emp
+              where ename='SCOTT');
+3)Find employee who have the highest salary in their respective departments?
+Answer:
+select ename,deptno
+from emp
+where sal=(select max(sal)
+              from emp
+              );
+4)List all employees who earn more than'SMITH'?
+Answer:
+select ename
+from emp
+where sal=(select max(sal)
+              from emp
+              );
