@@ -1,0 +1,18 @@
+create table course5(
+ name varchar(40),
+sal int,
+dept varchar(40),
+  fee int
+
+);
+
+insert into course5 values('sneha',25000,'computer application',24000);
+insert into course5 values('pavi',20000,'cyber security',50000);
+insert into course5 values('hari',45000,'computer science',35000);
+insert into course5 values('hema',65000,'aritificial intelligence',24000);
+insert into course5 values('kavi',55000,'information technology',35000);
+
+select avg(sal),dept
+from Course5
+group by dept
+having avg(sal)>=25000;
