@@ -26,4 +26,4 @@ insert into Course
 values('sql');
 insert into Course
   values('c++');
-
+update student set sname='priya' where sname='hari priya';
